@@ -14,11 +14,11 @@
   width: calc(100% / 3);
 }
 .link, .yoshi{
-  height: 270px;
+  width: 100%;
 }
 .column-fourth{
   width: 25%;
 }
-.kirby, .fox, .pikachu,.ness{
-  height: 175px;
+.kirby, .fox , .pikachu, .ness{
+  width: 100%;
 }
