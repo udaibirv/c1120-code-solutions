@@ -1,0 +1,155 @@
+.container{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row{
+  display: flex;
+}
+.column-full{
+  width: 100%;
+}
+header{
+  margin-top: 2rem;
+  border-bottom: solid darkgray;
+  border-width: 100%;
+  width: 100%;
+}
+.logo{
+  height: 25px;
+  position: relative;
+  bottom: .5rem;
+}
+a{
+  position: relative;
+  left: 31%;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  color: darkgray;
+  bottom: 1rem;
+  font-size: small;
+}
+.contact-us{
+  background-color: #05386b;
+  color: white;
+  padding: .5rem .6rem;
+  border-radius: 6%;
+
+}
+.hero-image{
+  background-image: url("images/hero.jpg");
+  height: 25.5rem;
+  width: 89%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  left: 3rem;
+
+
+}
+.hero-text{
+  position: relative;
+  top: 3rem;
+  left: 2rem;
+  width: 45%;
+  color: white;
+  font-family: 'Tiempos Headline', sans-serif;
+}
+.hero-text p{
+  font-size: small;
+  line-height: 1.9;
+}
+.column-half{
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-two{
+  background-color: whitesmoke;
+  font-family: 'Avenir';
+  color: rgb(110, 109, 109);
+  padding-bottom: 2rem;
+}
+header p{
+  font-size: small;
+}
+.container-two > header{
+  border-bottom: none;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  font-family: 'Avenir', sans-serif;
+}
+.column-two{
+  width: 50%;
+  justify-content: space-between;
+  color: rgb(110, 109, 109);
+}
+.column-two p{
+  font-size: small;
+}
+.learn-more{
+  margin-top: 1.5rem;
+  position: relative;
+  left: 14rem;
+  height: 2.3rem;
+  width: 8.5rem;
+  background-color: #05386b;
+  color: white;
+  font-family: 'Avenir', sans-serif;
+
+}
+.container-three{
+  background-color: #4f4f50;
+  margin-bottom: 3rem;
+  height: 20rem;
+  color: white;
+}
+.white{
+  height: 25px;
+  margin-top: 2rem;
+}
+.location{
+  margin-top: 2rem;
+  font-size: small;
+}
+.column-three{
+  width: 30.5%;
+  position: relative;
+  left: 3rem;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.company {
+  position: relative;
+  left: 9rem;
+  margin-top: 2rem;
+  font-family: 'Avenir', sans-serif;
+  font-size: small;
+}
+h4{
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.product{
+  margin-top: 2rem;
+  position: relative;
+  left: 3rem;
+  font-family: 'Avenir', sans-serif;
+  font-size: small;
+}
+footer{
+  background-color: lightgray;
+  position: relative;
+  bottom: 4rem;
+  height: 3rem;
+}
+li{
+  display: inline;
+  padding-left: 1rem;
+  font-family: 'Avenir', sans-serif;
+  font-size: small;
+
+}
