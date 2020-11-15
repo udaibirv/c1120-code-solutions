@@ -38,6 +38,7 @@ a{
 }
 .hero-image{
   background-image: url("images/hero.jpg");
+  filter: brightness(97%);
   height: 25.5rem;
   width: 89%;
   background-position: center;
