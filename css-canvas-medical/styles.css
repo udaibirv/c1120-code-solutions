@@ -11,7 +11,7 @@
 }
 header{
   margin-top: 2rem;
-  border-bottom: solid darkgray;
+  border-bottom: thin solid darkgray;
   border-width: 100%;
   width: 100%;
 }
@@ -38,7 +38,7 @@ a{
 }
 .hero-image{
   background-image: url("images/hero.jpg");
-  filter: brightness(97%);
+  filter: contrast(99%);
   height: 25.5rem;
   width: 89%;
   background-position: center;
@@ -46,6 +46,7 @@ a{
   background-size: cover;
   position: relative;
   left: 3rem;
+  margin-top: 4rem;
 
 
 }
@@ -66,6 +67,15 @@ a{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+
+}
+.location-one{
+  position: relative;
+  left: 3rem;
+}
+.location-two{
+  position: relative;
+  right: 3rem;
 }
 .container-two{
   background-color: whitesmoke;
@@ -82,6 +92,7 @@ header p{
   margin-bottom: 3rem;
   padding-top: 2rem;
   font-family: 'Avenir', sans-serif;
+  line-height: 2;
 }
 .column-two{
   width: 50%;
@@ -115,6 +126,7 @@ header p{
 .location{
   margin-top: 2rem;
   font-size: small;
+  line-height: .8;
 }
 .column-three{
   width: 30.5%;
@@ -142,7 +154,7 @@ h4{
   font-size: small;
 }
 footer{
-  background-color: lightgray;
+  background-color: rgb(240, 238, 238);
   position: relative;
   bottom: 4rem;
   height: 3rem;
