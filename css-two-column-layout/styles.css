@@ -1,0 +1,102 @@
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.column-half {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.header{
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  width: 100%;
+}
+.para{
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  color: rgb(104, 102, 102);
+  position: relative;
+  right: 4rem;
+}
+.header-para{
+  color: rgb(104, 102, 102);
+}
+h3{
+  display: block;
+  text-transform: uppercase;
+  font-size: medium;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+img {
+  height: 95px;
+}
+
+.software, .circumstance{
+  position: relative;
+  bottom: 1rem;
+  right: 4rem;
+}
+.practice, .data{
+  position: relative;
+  bottom: 1rem;
+  left: 4rem;
+}
+
+.info {
+  text-align: left;
+
+}
+.top-header, .bottom-header{
+  position: relative;
+  right: 4rem;
+}
+.top-header-two, .bottom-header-two{
+  position: relative;
+  left: 4rem;
+}
+.para-two{
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  color: rgb(104, 102, 102);
+  position: relative;
+  left: 4rem;
+}
+
+
+
+button {
+  border-color: tomato;
+  background-color: white;
+  height: 40px;
+  width: 160px;
+  color: tomato;
+  font-family: 'Karla', sans-serif;
+  margin: auto;
+  text-align: center;
+  font-size: medium;
+
+}
+
+.button-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
