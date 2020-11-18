@@ -24,16 +24,57 @@
   line-height: 2rem;
   width: 100%;
 }
+h1{
+  padding-top: 2rem;
+  font-size: 250%;
+  text-transform: uppercase;
+}
 .para{
-  width: 100%;
+  width: 87%;
   font-family: 'Karla', sans-serif;
   font-style: normal;
   color: rgb(104, 102, 102);
   position: relative;
-  right: 4rem;
+  right: 2rem;
+  line-height: 1.5;
+  font-size: small;
+}
+.para-two{
+  width: 88%;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  color: rgb(104, 102, 102);
+  position: relative;
+  left: 2rem;
+  line-height: 1.5;
+  font-size: small;
+}
+.para-three{
+  width: 80%;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  color: rgb(104, 102, 102);
+  position: relative;
+  top: 2rem;
+  right: 2.2rem;
+  line-height: 1.5;
+  font-size: small;
+}
+.para-four{
+  width: 85%;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  color: rgb(104, 102, 102);
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  line-height: 1.5;
+  font-size: small;
 }
 .header-para{
   color: rgb(104, 102, 102);
+  font-size: small;
+  line-height: 1.5rem;
 }
 h3{
   display: block;
@@ -44,18 +85,29 @@ h3{
 }
 
 img {
-  height: 95px;
+  height: 100px;
 }
 
-.software, .circumstance{
+.software{
   position: relative;
   bottom: 1rem;
-  right: 4rem;
+  right: 2rem;
 }
-.practice, .data{
+.circumstance{
+  position: relative;
+  right: 2rem;
+  top: 1rem;
+}
+.practice{
   position: relative;
   bottom: 1rem;
-  left: 4rem;
+  left: 2rem;
+}
+.data{
+  position: relative;
+  left: 2rem;
+  top: 1rem;
+
 }
 
 .info {
@@ -64,33 +116,30 @@ img {
 }
 .top-header, .bottom-header{
   position: relative;
-  right: 4rem;
+  right: 2rem;
 }
 .top-header-two, .bottom-header-two{
   position: relative;
-  left: 4rem;
+  left: 2rem;
 }
-.para-two{
-  width: 100%;
-  font-family: 'Karla', sans-serif;
-  font-style: normal;
-  color: rgb(104, 102, 102);
+.bottom-header , .bottom-header-two{
   position: relative;
-  left: 4rem;
+  top: 2rem;
 }
-
-
 
 button {
-  border-color: tomato;
   background-color: white;
-  height: 40px;
+  color: rgb(211, 75, 51);
+  height: 35px;
   width: 160px;
-  color: tomato;
   font-family: 'Karla', sans-serif;
   margin: auto;
   text-align: center;
   font-size: medium;
+  position: relative;
+  right: 1.5rem;
+  top: 3.5rem;
+  border-color: rgb(211, 75, 51);
 
 }
 
@@ -98,5 +147,6 @@ button {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3rem;
 
 }
