@@ -1,0 +1,42 @@
+.container{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+  text-align: center;
+}
+.row{
+  display: flex;
+}
+.column-fifth{
+  justify-content: space-evenly;
+}
+.dress-one, .key,.dress-two{
+  height: 350px;
+}
+.key{
+  position: relative;
+  left: 1rem;
+
+}
+.ysl{
+  height: 300px;
+  position: relative;
+  top: 3rem;
+}
+.lv-bag{
+  height: 300px;
+  width: 175px;
+  position: relative;
+  left: 1rem;
+  top: 1rem;
+}
+.info, .info-lv{
+  text-align: center;
+  position: relative;
+  top: 3rem;
+}
+.info-dress-one, .info-tiffany, .info-dress-two{
+  text-align: center;
+}
