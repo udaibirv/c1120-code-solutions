@@ -10,7 +10,6 @@ h2{
   text-align: center;
   padding-bottom: .2rem;
   font-family: 'Barlow', sans-serif;
-  font-weight: 200%;
 
 }
 .row{
@@ -44,6 +43,7 @@ h2{
 p{
   font-size: x-small;
   font-family: 'Barlow', sans-serif;
+  font-weight: 100;
 }
 h3{
   text-align: center;
