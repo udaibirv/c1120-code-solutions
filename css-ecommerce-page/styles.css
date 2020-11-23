@@ -1,0 +1,58 @@
+.container{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+p{
+  font-family: 'DM Sans', sans-serif;
+  font-size: small;
+}
+.row{
+  display: flex;
+}
+.column-fifth{
+  justify-content: space-evenly;
+}
+.title{
+  font-weight: 800;
+}
+.size{
+  color: lightgray;
+}
+.price{
+  background-color: #fae2c8;
+}
+.dress-one, .key,.dress-two{
+  height: 350px;
+}
+.key{
+  position: relative;
+  left: 1rem;
+
+}
+.ysl{
+  height: 300px;
+  position: relative;
+  top: 3rem;
+}
+.lv-bag{
+  height: 300px;
+  width: 195px;
+  position: relative;
+  left: 1.5rem;
+  top: 1rem;
+}
+.info, .info-lv{
+  text-align: center;
+  position: relative;
+  top: 3rem;
+
+}
+.info-dress-one, .info-tiffany, .info-dress-two{
+  text-align: center;
+}
