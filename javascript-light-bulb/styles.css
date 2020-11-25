@@ -1,0 +1,38 @@
+body{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #faf5d7;
+  display: flex;
+  justify-content: center;
+
+
+
+}
+body.click{
+  background-color: rgb(15, 15, 15);
+}
+
+
+.bulb-container{
+  border: solid rgb(252, 234, 137);
+  border-radius: 50%;
+  background-color: rgb(252, 234, 137);;
+  height: 14rem;
+  width: 14rem;
+  box-shadow: 2px 2px 8px 3px rgb(247, 229, 127);
+  position: relative;
+  top: 14rem;
+}
+.bulb-container-clicked{
+  border: solid rgb(37, 37, 37);
+  border-radius: 50%;
+  background-color: rgb(37, 37, 37);
+  height: 14rem;
+  width: 14rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 14rem;
+  box-shadow: 0px -8px 5px 6px black;
+}
