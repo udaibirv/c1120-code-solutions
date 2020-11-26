@@ -86,3 +86,7 @@ var pokedex = [
 ];
 
 var $row = document.querySelector('.row');
+for(var i = 0; i < pokedex.length; i++){
+  var $pokemonObject = renderPokemon(pokedex[i]);
+  $row.appendChild($pokemonObject);
+}
