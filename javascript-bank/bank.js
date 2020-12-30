@@ -30,7 +30,7 @@ Bank.prototype.getTotalAssets = function(){
 var grandTotal = 0;
 for(var i = 0; i < this.accounts.length; i++){
   if(this.accounts[i].balance > 0){
-    grandTotal+=this.accounts[i].balance;
+    grandTotal+=this.accounts[i].getBalance();
   }
 }
 return grandTotal;
