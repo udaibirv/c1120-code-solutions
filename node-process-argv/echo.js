@@ -1,1 +1,1 @@
-console.log("Udaibir Singh Virk");
+console.log(process.argv[2]);
