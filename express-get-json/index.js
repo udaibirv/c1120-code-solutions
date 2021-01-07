@@ -22,10 +22,11 @@ const grades = {
 const app = express();
 
 app.get('/api/grades', function (req, res) {
-  for (const key in grades) {
-    const array = `${key}: ${grades[key]}`;
+  const gradeArray = [];
+  for(const student in grades){
+    gradeArray.push(grades[student]);
   }
-  res.json([array]);
+  res.json(gradeArray);
 
 });
 
