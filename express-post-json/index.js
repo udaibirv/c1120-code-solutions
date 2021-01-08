@@ -14,10 +14,11 @@ app.get('/api/grades', function(req, res){
 
 
 app.post('/api/grades', function(req, res){
-
-  req.body.id = nextId++;
-  res.send(req.body);
-  res.status(201).json;
+  const newGrade = req.body;
+  const id = nextId++;
+  newGrade.id = id;
+  grades[id] = newGrade;
+  res.status(201).json(newGrade);
 })
 
 app.listen(3000, () => {
