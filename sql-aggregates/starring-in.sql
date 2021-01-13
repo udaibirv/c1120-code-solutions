@@ -1,5 +1,4 @@
-
-select "actors"."firstName" as "first", "actors"."lastName" as "last", "categories"."name", count("filmCategory".*) as "numberOfFilms"
+select "actors"."firstName" as "first", "actors"."lastName" as "last", "categories"."name" as "category", count("filmCategory".*) as "numberOfFilms"
   from "actors"
   join "castMembers" using ("actorId")
   join "filmCategory" using ("filmId")
