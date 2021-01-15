@@ -57,7 +57,6 @@ app.post('/api/grades', (req, res) => {
 
 app.put('/api/grades/:gradeId', (req, res) => {
   const gradeId = req.params.gradeId;
-  console.log(req.params.gradeId);
   if(!gradeId){
     return res.status(404).json({
       error: 'The grade targeted by the Id does not exist in the database'
