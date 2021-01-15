@@ -24,22 +24,17 @@ console.log("Sum: ", sum);
 const reduce2 = (accumulator, currentValue) => accumulator * currentValue;
 const product = numbers.reduce(reduce2);
 console.log("Product: ", product);
-
-const depositArray = [];
-const withdrawalArray = [];
-for(let i = 0; i < account.length; i++){
-  if(account[i].type === 'deposit'){
-    depositArray.push(account[i].amount);
+const balance = account.reduce((total, transaction) => {
+  if(transaction.type === 'deposit'){
+    total+=transaction.amount;
   }
-  if(account[i].type === 'withdrawal'){
-    withdrawalArray.push(account[i].amount);
+  if(transaction.type === 'withdrawal'){
+    total-=transaction.amount;
   }
-}
-const reduce3 = (accumulator, currentValue) => accumulator + currentValue;
-const totalDeposit = depositArray.reduce(reduce3);
-const totalWithdrawal = withdrawalArray.reduce(reduce3);
-console.log("Balance: ", totalDeposit - totalWithdrawal);
+  return total;
+}, 0);
 
+console.log("balance: ", balance);
 const reduce4 = (accumulator, currentValue) => Object.assign(accumulator, currentValue);
 const composite = traits.reduce(reduce4);
 console.log("Composite:", composite);
