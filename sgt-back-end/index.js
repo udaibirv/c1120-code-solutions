@@ -56,15 +56,16 @@ app.post('/api/grades', (req, res) => {
 })
 
 app.put('/api/grades/:gradeId', (req, res) => {
-  const gradeId = req.params.gradeId;
-  if(!gradeId){
-    return res.status(404).json({
-      error: 'The grade targeted by the Id does not exist in the database'
+  const gradeId = parseInt(req.params.gradeId, 10);
+
+  if(!Number.isInteger(gradeId) || gradeId <= 0){
+    return res.status(400).json({
+      error: 'The gradeId must be a positive integer'
     });
   }
-  if(req.params.id <= 0 || !req.body.name || !req.body.score || !req.body.score){
+  if(!req.body.name || !req.body.score || !req.body.score){
     return res.status(400).json({
-      error: 'Inputted gradeId, name, score, or course is invalid'
+      error: 'Inputted name, score, or course is invalid'
     });
   }
   const sql = `
@@ -74,7 +75,14 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const params = [req.body.name, req.body.course, req.body.score, req.params.gradeId];
   db.query(sql, params)
     .then(result => {
-      res.status(200).json(result.rows[0]);
+      const grade = result.rows[0];
+      if(!grade){
+        res.status(404).json({
+          error: 'grade targerted does not exist in the database'
+        });
+      } else{
+      res.status(200).json(grade);
+      }
     })
     .catch(err =>{
       console.error(err);
