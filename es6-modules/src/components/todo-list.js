@@ -1,4 +1,4 @@
-import { createElement } from ('../lib');
+import { createElement } from '../lib';
 
 class TodoList {
   constructor(onToggle) {
@@ -49,4 +49,4 @@ class TodoList {
   }
 }
 
-export default class {TodoList};
+export default TodoList;

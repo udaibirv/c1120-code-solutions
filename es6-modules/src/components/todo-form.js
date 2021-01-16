@@ -1,4 +1,4 @@
-import { createElement } from ('../lib');
+import { createElement } from '../lib';
 
 class TodoForm {
   constructor(onSubmit) {
@@ -44,4 +44,4 @@ class TodoForm {
   }
 }
 
-export default class {TodoForm};
+export default TodoForm;
