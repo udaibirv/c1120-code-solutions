@@ -9,6 +9,7 @@ constructor(props){
 
 handleClick(){
   console.log('Click worked');
+  console.log("state is: ", isPlayState);
   const isPlayState = this.state.isPlay;
   this.setState({isPlay: !isPlayState});
 }
