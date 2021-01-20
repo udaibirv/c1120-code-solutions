@@ -9,10 +9,9 @@ class ToggleSwitch extends React.Component{
   }
 
   handleClick(){
-    console.log("handle click worked")
+    console.log("handle click worked");
     const isOnState = this.state.isOn;
-    console.log("isOnState: ", isOnState);
-    this.setState({isOn: !isOnState}, () => console.log(this.state));
+    this.setState({isOn: !isOnState});
   }
 
   render(){
