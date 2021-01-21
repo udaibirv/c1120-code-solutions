@@ -6,7 +6,7 @@ constructor(props){
   this.incrementer = this.incrementer.bind(this);
   this.pause = this.pause.bind(this);
   this.reset = this.reset.bind(this);
-  this.state = {count: 0, intervalId: null };
+  this.state = {count: 0, intervalId: null, isActive: true };
 }
 
 
@@ -15,12 +15,12 @@ incrementer(){
   const start = setInterval(() => {
     this.setState({count: this.state.count + 1});
   }, 1000)
-  this.setState({intervalId: start});
+  this.setState({intervalId: start, isActive: false});
 }
 
 pause(){
   clearInterval(this.state.intervalId);
-  this.setState({intervalId: null});
+  this.setState({intervalId: null, isActive: true});
 
 }
 
@@ -34,11 +34,24 @@ reset(){
 }
 
 render(){
+  let playStatus = 'fa-play-circle';
+  let pauseStatus = 'fa-pause';
+  if(this.state.isActive){
+    pauseStatus = 'hidden';
+
+  }
+  if(!this.state.isActive){
+    playStatus = 'hidden';
+  }
+
+
   return (
     <div className="wrapper">
-      <div onClick={this.reset} className="circle"> {this.state.count} </div>
-      <i onClick={this.incrementer} className="far fa-play-circle"></i>
-      <i onClick={this.pause}className="fas fa-pause"></i>
+      <div onClick={this.reset} className="circle">
+        <h1>{this.state.count}</h1>
+      </div>
+      <i onClick={this.incrementer} className={`far fa-2x ${playStatus}`} ></i>
+      <i onClick={this.pause} className={`fas fa-2x ${pauseStatus}`}></i>
     </div>
   )
 }
