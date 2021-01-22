@@ -14,7 +14,6 @@ class ValidatedInput extends React.Component{
 
   check(){
     let message = null;
-    // const test = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
     if(this.state.password.length < 8){
       message = 'Your Password is too short'
@@ -35,10 +34,7 @@ class ValidatedInput extends React.Component{
         </div>
         <input type="password" className="password" value={this.state.value} onChange={this.handleChange} />
         <p>{message}</p>
-
-        {/* check for message and render icon based off that  */}
-          { /* <i className="fas fa-times"></i>
-          <i className="fas fa-check"></i>  */}
+          <i className={`fas ${message ? 'fa-times red' : 'fa-check green'}`}></i>
 
   </form>
     )
