@@ -32,16 +32,16 @@ export default class App extends React.Component {
   }
 
   addTodo(newTodo) {
-    // const myInit = {
-    //   method: 'POST',
-    //   body: JSON.stringify()
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // }
-    // fetch('/api/todos', myInit)
-    // .then(res => res.json())
-    // .then(newTodo => this.setState({todos: newTodo}))
+    const newEntry= req.body;
+    fetch('/api/todos', {
+      method: 'POST',
+      body: JSON.stringify(),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(data => this.setState({todos: newEntry}))
     /**
     * Use fetch to send a POST request to `/api/todos`.
     * Then 😉, once the response JSON is received and parsed,
@@ -53,6 +53,24 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
+    // fetch('/api/todos/${todoId}', {
+    //   method: 'PATCH',
+    //   body: JSON.stringify(),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    // .then(res => res.json())
+    // .then(data => {
+    //   todos.map(id => {
+    //     if(res.todos.todoId === id){
+    //       this.setState({todos: res.todos, !this.state.isComplete})
+    //     }
+    //   }
+
+    //     )
+    // })
+
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
