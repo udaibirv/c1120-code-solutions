@@ -22,6 +22,7 @@ export default class App extends React.Component {
     .then(res => res.json())
     .then(data => {
       this.setState({todos: data});
+      console.log('testing');
     })
 
     /**
@@ -53,23 +54,32 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
-    // fetch('/api/todos/${todoId}', {
-    //   method: 'PATCH',
-    //   body: JSON.stringify(),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // })
-    // .then(res => res.json())
-    // .then(data => {
-    //   todos.map(id => {
-    //     if(res.todos.todoId === id){
-    //       this.setState({todos: res.todos, !this.state.isComplete})
-    //     }
-    //   }
+    const newTodo =  this.state.todos.map(todo => {
+      if(todo.todoId === todoId){
+        return todo.isCompleted;
+      }
+    })
+    fetch('/api/todos/${todoId}', {
+      method: 'PATCH',
+      body: JSON.stringify({isCompleted: !newTodo}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      console.log(this.state.todos);
 
-    //     )
-    // })
+
+      // todos.map(id => {
+      //   if(res.todos.todoId === id){
+      //     this.setState({todos: res.todos, !this.state.isComplete})
+      //   }
+      })
+
+
+    }
 
     /**
      * Find the index of the todo with the matching todoId in the state array.
@@ -85,7 +95,7 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-  }
+
 
   render() {
     return (
