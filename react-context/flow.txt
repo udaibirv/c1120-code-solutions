@@ -1,0 +1,26 @@
+User Can Sign Up:
+If the user clicks on the "register now" button a fetch request is sent with an interlopation of the action variable which is set to the string sign-up. In regards
+to the database, when the user signs in a post request is sent with the variables username and password attatched to the body property of the request object.
+The user's password is then hashed and stored as "hashedPassword", which is followed by an sql statment that is set to insert the
+user's username and password into the database. The user database is then queried and followed by a .then method which assigns the user's information
+into the rows property of the response object. A status of 201, along with the user's info in JSON format is set, and any errors are caught using the .catch method
+at the end of the code block.
+
+User can Sign In:
+Similar to the sign in's server functionality, a fetch request is being set up with an interlopation of the action varialble, which in this case would be
+set to sign-in. Following succesfull registration, the user is sent to the log in page facilitated by the hashchange event listener. In regards to the database,
+a post request is being sent with the user's username and password as the body of the request object. Followed by that is an sql statement selecting the user's userId and
+password depending on the username they typed in, which then gets assigned as params. After the database is queried using the previously mentioned sql statement
+and the newely created params array, a variable names users gets assigned as the resposne from the post request. The user's password is checked against the hashed password
+using the argon2's verify method, and provided that the passwords match, a token is created so the server can recognize the user. The token is created by using the
+sign method of the jwt object, which takes in the payload containing the user's userId and password, along with the TOKEN_SECRET from process.env.
+
+User Can Stay Signed In:
+The user is able to stay signed in, even after refresh, becasue their token is being saved into local storage within the handleSignIn method of the App class component.
+The state is then set to the user, which allows the user to stay signed in.
+
+User Can Sign Out:
+User is able to sign out due to the handleSignOut method in the App component class. Where in the sign in method, the user's token was set into local storage, this time,
+the token is actually removed from local storage. Additionally, the user object in the state is set to null, and the user then has the option to sign in once more,
+redirecting them to the home page. Becasue the user already has a token, the server is able to recongize this token, and provided they enter in the correct information,
+they are able to acess the app again if they choose to do so.
