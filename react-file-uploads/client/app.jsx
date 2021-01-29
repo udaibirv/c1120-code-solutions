@@ -8,7 +8,7 @@ export default class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const myForm = new FormData(event.target);
+    const form = new FormData(event.target);
     fetch('/api/uploads',  {
       method: 'POST',
       body: form
