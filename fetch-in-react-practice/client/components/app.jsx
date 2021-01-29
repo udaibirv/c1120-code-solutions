@@ -22,7 +22,6 @@ export default class App extends React.Component {
     .then(res => res.json())
     .then(data => {
       this.setState({todos: data});
-      console.log('testing');
     })
 
     /**
@@ -54,22 +53,32 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
+    let foundTodo;
     const newTodo =  this.state.todos.map(todo => {
       if(todo.todoId === todoId){
-        return todo.isCompleted;
+        foundTodo = todo.isCompleted;
       }
     })
-    fetch('/api/todos/${todoId}', {
+    console.log(todoId);
+    fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
-      body: JSON.stringify({isCompleted: !newTodo}),
+      body: JSON.stringify({isCompleted: !foundTodo}),
       headers: {
         'Content-Type': 'application/json'
       }
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
-      console.log(this.state.todos);
+      const allTodos = this.state.todos;
+      const mapTodos = allTodos.map(todo => {
+        if(todo.todoId === todoId){
+          return data;
+        }else{
+          return todo;
+        }
+      })
+
+      this.setState({todos: mapTodos});
 
 
       // todos.map(id => {
